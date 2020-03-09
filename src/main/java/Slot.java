@@ -1,4 +1,7 @@
 import entities.Player;
+import exceptions.NegativeBetException;
+import exceptions.NotEnoughMoneyException;
+
 import java.util.Scanner;
 import java.math.BigDecimal;
 
@@ -20,17 +23,20 @@ public class Slot {
         System.out.print("Bet: ");
 
         String line = scanner.nextLine();
-        if (line.trim().isEmpty()) {
+        if ( line.trim().isEmpty() ) {
             throw new IllegalArgumentException();
         } else {
-            player.setStakeMoney(new BigDecimal(Double.parseDouble(line)));
+            player.setStakeMoney( BigDecimal.valueOf(Double.parseDouble(line)) );
 
-            if (this.player.getBalance().compareTo(player.getStakeMoney()) >= 0) {
+            if ( this.player.getStakeMoney().compareTo( BigDecimal.ZERO ) < 0 ) {
+                throw new NegativeBetException( );
+            }
+
+            if ( this.player.getBalance().compareTo(player.getStakeMoney()) >= 0 ) {
 
                 this.player.setBalance(this.player.getBalance().subtract(player.getStakeMoney()));
-            } else {
-                System.out.println("Not enough money!");
-                return;
+            }  else {
+                throw  new NotEnoughMoneyException();
             }
         }
 

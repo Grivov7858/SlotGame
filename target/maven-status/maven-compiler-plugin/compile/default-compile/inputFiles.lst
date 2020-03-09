@@ -1,0 +1,10 @@
+/home/dimitar/Desktop/IntelliJ/SlotGame/src/main/java/Main.java
+/home/dimitar/Desktop/IntelliJ/SlotGame/src/main/java/exceptions/NegativeBetException.java
+/home/dimitar/Desktop/IntelliJ/SlotGame/src/main/java/exceptions/NotEnoughMoneyException.java
+/home/dimitar/Desktop/IntelliJ/SlotGame/src/main/java/entities/Player.java
+/home/dimitar/Desktop/IntelliJ/SlotGame/src/main/java/entities/Column.java
+/home/dimitar/Desktop/IntelliJ/SlotGame/src/main/java/printers/ConsolePrinter.java
+/home/dimitar/Desktop/IntelliJ/SlotGame/src/main/java/readers/FileReaderImpl.java
+/home/dimitar/Desktop/IntelliJ/SlotGame/src/main/java/printers/Printer.java
+/home/dimitar/Desktop/IntelliJ/SlotGame/src/main/java/readers/FileReader.java
+/home/dimitar/Desktop/IntelliJ/SlotGame/src/main/java/Slot.java

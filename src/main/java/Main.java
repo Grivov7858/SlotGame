@@ -1,5 +1,7 @@
 import entities.Column;
 import entities.Player;
+import exceptions.NegativeBetException;
+import exceptions.NotEnoughMoneyException;
 import printers.ConsolePrinter;
 import printers.Printer;
 import readers.FileReader;
@@ -29,7 +31,13 @@ public class Main {
                 slot.play();
                 String[][] visibleArea = printer.print(columns, randNumbers);
                 slot.checkForProfit(visibleArea);
-            } catch (IllegalArgumentException e) {
+            } catch ( NotEnoughMoneyException e ) {
+
+                System.out.println( "Not enough money!" );
+            } catch ( NegativeBetException e ) {
+                System.out.println( "Bet must be positive!" );
+            }
+            catch ( IllegalArgumentException e ) {
                 System.out.println("Wrong input for Bet!");
             }
         }
